@@ -1,0 +1,392 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+<body>
+<style type="text/css">
+* {
+  margin: 0px; 
+  padding: 0px; 
+  box-sizing: border-box;
+}
+.limiter {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container-login100 {
+  width: 100%;  
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background: #ebeeef;
+}
+
+
+.wrap-login100 {
+  width: 650px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.login100-form-title {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  padding: 70px 15px 74px 15px;
+}
+
+.login100-form-title-1 {
+  font-family: Poppins-Bold;
+  font-size: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.login100-form-title::before {
+  content: "";
+  
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(54,84,99,0.7);
+}
+
+
+
+.login100-form {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 43px 55px 93px 190px;
+}
+
+
+
+.wrap-input100 {
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid #b2b2b2;
+}
+
+.label-input100 {
+  font-family: Poppins-Regular;
+  font-size: 15px;
+  color: #808080;
+  line-height: 1.2;
+  text-align: right;
+
+  position: absolute;
+  top: 14px;
+  left: -150px;
+  width: 100px;
+
+}
+.input100 {
+  font-family: Poppins-Regular;
+  font-size: 15px;
+  color: #555555;
+  line-height: 1.2;
+
+  display: block;
+  width: 100%;
+  background: transparent;
+  padding: 0 5px;
+}
+
+.focus-input100 {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.focus-input100::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 1px;
+
+  -webkit-transition: all 0.6s;
+  -o-transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  transition: all 0.6s;
+
+  background: #57b846;
+}
+
+
+
+
+@media (max-width: 576px) {
+  .login100-form {
+    padding: 43px 15px 57px 117px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login100-form {
+    padding: 43px 15px 57px 15px;
+  }
+
+  .label-input100 {
+    text-align: left;
+    position: unset;
+    top: unset;
+    left: unset;
+    width: 100%;
+    padding: 0 5px;
+  }
+}
+
+
+h1{
+text-align: center;
+font-size: 30px;
+
+}
+
+  input{
+    position: absolute;
+    margin-left: 230px; 
+    border: transparent;
+    padding: 15px 20px;
+    border-radius: 25px;
+     font-size: 14px;
+  }
+  label{
+    color: gray; 
+    position: absolute;
+    margin-left: 70px; 
+    margin-top: 15px; 
+    font-size: 14px;
+  }
+  .submit{
+    border: none;
+    padding: 15px 20px;
+    border-radius: 25px;
+    background:#1161ee; 
+    color: white;
+    position: absolute; 
+    width: 25%;
+    margin-left: 37%;
+  }
+  p{
+    text-align: center;
+     font-size: 17px;
+     color:black;
+  }
+
+  p.a{
+    font-size: 15px;color:black;
+  }
+  .span1{
+
+    color:red;
+    text-align:center;
+    font-size: 10px;
+
+  }
+</style>
+
+
+
+ <div class ="container-fluid p-0" >
+<div class="jumbotron" style="">
+<div class="limiter">
+    <div class="container-login100">
+      <div class="wrap-login100" >
+        <div class="login100-form-title">
+        
+          <span class="login100-form-title-1">
+        <h1>Register Here</h1>
+          </span>
+        </div>
+ <form method="POST" onsubmit="return validation()">       
+<br>
+  <div>
+      <label for="username" >Name :</label>    
+      <input type="text" name="Name" placeholder="Enter Your  Name" id="Name" autocomplete="off">
+      <span id="yourname" class="span1"></span><br><br>
+ </div>
+
+ <div>
+      <label for="username" >Username :</label> 
+      <input type="text" name="username" placeholder="Enter Your Username" id="username" autocomplete="off">
+      <span id="uname" class="span1"></span><br><br>
+</div>
+
+<div>
+      <label for="username">Email :</label> 
+      <input type="text" name="email" placeholder="Enter Your Email" id="email" autocomplete="off">
+      <span id="email1" class="span1"></span><br><br>
+</div>
+
+<div>
+      <label for="username">Mobile No:</label> 
+      <input type="text" name="mobileno" placeholder="Enter Your Email" id="mobileno" autocomplete="off">
+      <span id="mobileno1" class="span1"></span><br><br>
+</div>
+
+<div>
+      <label for="" >Password:</label> 
+      <input type="password" name="password1" placeholder="Enter Your Password" id="password1" autocomplete="off">
+      <span id="pass" class="span1"></span><br><br>
+</div>
+
+ <div>
+      <label for="username" >Confirm Password:</label> 
+      <input type="password" name="password1" placeholder="Enter Your Password" id="cpassword1" autocomplete="off">
+      <span id="pass1" class="span1"></span>
+</div>
+  <br><br><br>
+  
+  <input type="submit" name="submit" class="submit" value="submit"><br><br><br><br>
+  <p >If Already Register?<a href="login">Login</a></p>
+</form>
+
+  <script type="text/javascript">
+    function validation(){
+      var Name = document.getElementById('Name').value;
+      var username = document.getElementById('username').value;
+      var email = document.getElementById('email').value;
+      var password1 = document.getElementById('password1').value;
+      var cpassword1 = document.getElementById('cpassword1').value;
+      var mobileno = document.getElementById('mobileno').value;
+      
+
+      if(Name == ""){
+        document.getElementById('yourname').innerHTML= " Please fill the your name";
+        return false;
+      }
+      if((Name.length<=2)||(Name.length>20)){
+        document.getElementById('yourname').innerHTML= " ** Name length must be between 3 to 20";
+        return false;
+      }
+
+       if(!isNaN(Name)){
+         document.getElementById('yourname').innerHTML= "Only Charater are allowed";
+         return false;
+      }
+       if(username == ""){
+        document.getElementById('uname').innerHTML= " Please fill the  username";
+         return false;
+      }
+
+      if((username.length<=2)||(username.length>10)){
+        document.getElementById('uname').innerHTML= " ** Name length must be between 3 to 10";
+        return false;
+      }
+      if(!isNaN(username)){
+         document.getElementById('uname').innerHTML= "Only Charater are allowed";
+         return false;
+      }
+
+       if(email == ""){
+        document.getElementById('email1').innerHTML= " Please fill the your email";
+         return false;
+      }
+
+      if (email.indexOf('@')<=0){
+         document.getElementById('email1').innerHTML= "Invalid Position of @";
+         return false;
+       }
+
+       if((email.charAt(email.length-4)!='.') && (email.charAt(email.length-3)!='.')){
+        document.getElementById('email1').innerHTML= "Invalid Position of .";
+         return false;
+       }
+
+
+
+        if(mobileno == ""){
+        document.getElementById('mobileno1').innerHTML= " Please fill the Mobile No";
+         return false;
+      }
+
+       if(isNaN(mobileno)){
+        document.getElementById('mobileno1').innerHTML= " User Must Write number not charater";
+         return false;
+       }
+
+        if(mobileno.length!=10){
+        document.getElementById('mobileno1').innerHTML= " User must write 10 digit Mobile No";
+         return false;
+      }
+
+
+
+
+
+
+       if(password1 == ""){
+        document.getElementById('pass').innerHTML= " Please fill the your Password";
+         return false;
+      }
+      
+       if((password1.length<=5)||(password1.length>10)){
+        document.getElementById('pass').innerHTML= " ** Password must be between 6 to 10";
+        return false;
+      }
+
+      if(password1!=cpassword1){
+         document.getElementById('pass1').innerHTML= " ** Password and Confirm Password is Not Matching";
+        return false;
+      }
+
+       if(cpassword1 == ""){
+        document.getElementById('pass1').innerHTML= " Please fill the your Password";
+         return false;
+      }
+
+      
+
+
+
+   }
+</script>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</body>
+
